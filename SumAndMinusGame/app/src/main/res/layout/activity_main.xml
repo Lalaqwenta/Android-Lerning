@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_mdpi"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/grid_layout_5x5"
+        app:columnCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="5">
+
+        <ImageView
+            android:id="@+id/cornerImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:tag="0"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/upButton"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="1"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/plus" />
+
+        <ImageButton
+            android:id="@+id/upButton2"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="2"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/plus" />
+
+        <ImageButton
+            android:id="@+id/upButton3"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="3"
+            app:layout_column="3"
+            app:layout_row="0"
+            app:srcCompat="@drawable/plus" />
+
+        <ImageView
+            android:id="@+id/cornerImageView2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:tag="4"
+            app:layout_column="4"
+            app:layout_row="0"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/leftButton"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="5"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/cellTextView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="6"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/cellTextView2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="7"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/cellTextView3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="8"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="3"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="-25dp"
+            tools:layout_editor_absoluteY="605dp" />
+
+        <ImageButton
+            android:id="@+id/rightButton"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="9"
+            app:layout_column="4"
+            app:layout_row="1"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageButton
+            android:id="@+id/leftButton2"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="10"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/cellTextView4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="11"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/cellTextView5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="12"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/cellTextView6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="13"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="3"
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/rightButton2"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="14"
+            app:layout_column="4"
+            app:layout_row="2"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageButton
+            android:id="@+id/leftButton3"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="15"
+            app:layout_column="0"
+            app:layout_row="3"
+            app:srcCompat="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/cellTextView7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="16"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/cellTextView8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="17"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="2"
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/cellTextView9"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:tag="18"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            app:layout_column="3"
+            app:layout_row="3" />
+
+        <ImageButton
+            android:id="@+id/rightButton3"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="19"
+            app:layout_column="4"
+            app:layout_row="3"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageView
+            android:id="@+id/cornerImageView3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:tag="20"
+            app:layout_column="0"
+            app:layout_row="4"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/downButton"
+            android:layout_width="69dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="21"
+            app:layout_column="1"
+            app:layout_row="4"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageButton
+            android:id="@+id/downButton2"
+            android:layout_width="70dp"
+            android:layout_height="71dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="22"
+            app:layout_column="2"
+            app:layout_row="4"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageButton
+            android:id="@+id/downButton3"
+            android:layout_width="70dp"
+            android:layout_height="71dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:tag="23"
+            app:layout_column="3"
+            app:layout_row="4"
+            app:srcCompat="@drawable/minus" />
+
+        <ImageView
+            android:id="@+id/cornerImageView4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:tag="24"
+            app:layout_column="4"
+            app:layout_row="4"
+            app:srcCompat="@android:color/transparent" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/turnCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="left|center_vertical"
+            android:text="You have yet spent: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/turnCounterTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/turnCounterTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text=" turns!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1500dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        <TextView
+            android:id="@+id/progressCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="left|center_vertical"
+            android:text="You have yet spent: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/progressCounterTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text=" 0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/progressCounterTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text=" turns!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onClickNewGame"
+        android:text="Start a new game!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

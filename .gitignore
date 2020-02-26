@@ -1,47 +1,40 @@
+#built application files
+*.apk
+*.ap_
 
-deliverables/
+# files for the dex VM
+*.dex
 
-Sounds/
+# Java class files
+*.class
 
-CurrencyConverter/.idea/
+# generated files
+bin/
+gen/
 
-CurrencyConverter/app/build.gradle
+# Local configuration file (sdk path, etc)
+local.properties
 
-CurrencyConverter/app/proguard-rules.pro
+# Windows thumbnail db
+Thumbs.db
 
+# OSX files
+.DS_Store
 
-CurrencyConverter/app/src/androidTest/
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+build/
+.navigation
+captures/
+output.json 
 
-CurrencyConverter/app/src/main/res/
+#NDK
+obj/
+.externalNativeBuild
 
-CurrencyConverter/app/src/test/
-
-CurrencyConverter/gradle/
-
-CurrencyConverter/build.gradle
-
-CurrencyConverter/gradle.properties
-
-CurrencyConverter/gradlew
-
-CurrencyConverter/gradlew.bat
-
-CurrencyConverter/settings.gradle
-
-SumAndMinusGame/gradle/
-
-SumAndMinusGame/app/src/main/res/
-
-SumAndMinusGame/app/src/
-
-SumAndMinusGame/
-
-ListViewTest/app/
-
-ListViewTest/
-
-CurrencyConverter/
-
-DemoApp/
-
-ExampleProject/
+# Sound and images
+/deliverables
+/Sounds
