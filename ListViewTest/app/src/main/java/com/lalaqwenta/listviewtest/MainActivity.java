@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
 
-    ArrayList<Integer> numsArray;
+    ArrayList<String> numsArray;
 
-    ArrayAdapter<Integer> arrayAdapter;
+    ArrayAdapter<String> arrayAdapter;
 
     SeekBar seekBar;
 
@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
     void correctList() {
         listView = findViewById(R.id.listView);
-        numsArray = new ArrayList<Integer>();
-        for (int i = 0; i < 20; i++)
+        numsArray = new ArrayList<String>();
+        for (int i = 0; i < 10; i++)
         {
-            numsArray.add((i+1)*(seekBar.getProgress()+1));
+            numsArray.add(String.valueOf((i+1)*(seekBar.getProgress()+1)));
         }
 
-        arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_expandable_list_item_1, numsArray);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, numsArray);
         listView.setAdapter(arrayAdapter);
     }
 
@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         currentNumberTextView = (TextView) findViewById(R.id.currentNumberTextView);
+
+        correctProgress();
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                correctProgress();
+
             }
         });
     }
