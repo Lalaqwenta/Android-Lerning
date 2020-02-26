@@ -1,29 +1,7 @@
 
-CurrencyConverter/app/src/main/res/drawable/
-
-CurrencyConverter/app/src/main/res/drawable-v24/
-
-CurrencyConverter/app/src/main/res/mipmap-anydpi-v26/
-
-CurrencyConverter/app/src/test/
-
-CurrencyConverter/app/src/androidTest/
-
 deliverables/
 
 Sounds/
-
-CurrencyConverter/app/src/main/res/mipmap-hdpi/
-
-CurrencyConverter/app/src/main/res/mipmap-mdpi/
-
-CurrencyConverter/app/src/main/res/mipmap-xhdpi/
-
-CurrencyConverter/app/src/main/res/mipmap-xxhdpi/
-
-CurrencyConverter/app/src/main/res/mipmap-xxxhdpi/
-
-CurrencyConverter/app/src/main/res/values/
 
 CurrencyConverter/.idea/
 
@@ -31,4 +9,39 @@ CurrencyConverter/app/build.gradle
 
 CurrencyConverter/app/proguard-rules.pro
 
+
+CurrencyConverter/app/src/androidTest/
+
+CurrencyConverter/app/src/main/res/
+
+CurrencyConverter/app/src/test/
+
+CurrencyConverter/gradle/
+
+CurrencyConverter/build.gradle
+
+CurrencyConverter/gradle.properties
+
+CurrencyConverter/gradlew
+
+CurrencyConverter/gradlew.bat
+
+CurrencyConverter/settings.gradle
+
+SumAndMinusGame/gradle/
+
+SumAndMinusGame/app/src/main/res/
+
+SumAndMinusGame/app/src/
+
+SumAndMinusGame/
+
+ListViewTest/app/
+
+ListViewTest/
+
 CurrencyConverter/
+
+DemoApp/
+
+ExampleProject/
