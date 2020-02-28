@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     void changeTime(long timeLeft)
     {
-        timeLeftTextView.setText(String.format("%d:%d", timeLeft/60, timeLeft%60));
+            timeLeftTextView.setText(timeString(timeLeft));
     }
 
     void updateTimer(long progress) {
@@ -64,6 +64,24 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
+    String timeString (int timeVal) {
+        if (timeVal%60 < 10) {
+            return String.format("%d:0%d", timeVal/60, timeVal%60);
+        }
+        else {
+            return String.format("%d:%d", timeVal/60, timeVal%60);
+        }
+    }
+
+    String timeString (long timeVal) {
+        if (timeVal%60 < 10) {
+            return String.format("%d:0%d", timeVal/60, timeVal%60);
+        }
+        else {
+            return String.format("%d:%d", timeVal/60, timeVal%60);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         timeSetTextView = findViewById(R.id.timeSetTextView);
 
         final int progress = seekBar.getProgress();
-        timeSetTextView.setText(String.format("%d:%d", (progress+1)/60, (progress+1)%60));
+
+        timeSetTextView.setText(timeString(progress+1));
+
         changeTime(progress+1);
         updateTimer(progress+1);
 
@@ -85,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 changeTime(progress + 1);
-                timeSetTextView.setText(String.format("%d:%d", (progress+1)/60, (progress+1)%60));
+                timeSetTextView.setText(timeString(progress+1));
             }
 
             @Override
