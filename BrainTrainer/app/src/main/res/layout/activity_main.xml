@@ -47,14 +47,18 @@
         android:id="@+id/beginButton"
         android:layout_width="256dp"
         android:layout_height="256dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
         android:onClick="onClickBegin"
         android:text="Begin!"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/gridLayout"
-        app:layout_constraintTop_toBottomOf="@+id/taskTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
@@ -109,24 +113,24 @@
             android:text="Button" />
 
         <Button
-            android:id="@+id/answerButton5"
-            android:layout_width="205dp"
-            android:layout_height="220dp"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="onClickAnswer"
-            android:tag="4"
-            app:autoSizeTextType="uniform"
-            android:text="Button" />
-
-        <Button
             android:id="@+id/answerButton6"
-            android:layout_width="210dp"
+            android:layout_width="205dp"
             android:layout_height="220dp"
             android:background="@android:color/holo_green_dark"
             android:onClick="onClickAnswer"
             android:tag="5"
-            app:autoSizeTextType="uniform"
-            android:text="Button" />
+            android:text="Button"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/answerButton5"
+            android:layout_width="210dp"
+            android:layout_height="220dp"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="onClickAnswer"
+            android:tag="4"
+            android:text="Button"
+            app:autoSizeTextType="uniform" />
 
     </androidx.gridlayout.widget.GridLayout>
 

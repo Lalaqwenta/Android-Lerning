@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     CountDownTimer timer;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isInGame = false;
 
+    int randomSeed = 31;
+
     int oneTryTime_inSeconds = 30;
     int oneSecond = 1000;
 
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     TextView timerTextView, scoreTextView, taskTextView;
 
     void updateScoreTextView () {
-        scoreTextView.setText(String.format("%d/%d", score, tries));
+        scoreTextView.setText(String.format(Locale.ENGLISH,"%d/%d", score, tries));
     }
 
     void createTimer () {
@@ -43,31 +47,35 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 updateTimerTextView(0);
                 isInGame = false;
+                findViewById(R.id.beginButton).animate().translationXBy(-1000);
+                findViewById(R.id.beginButton).setVisibility(View.VISIBLE);
+                ((Button)findViewById(R.id.beginButton)).setText("Start a new game?");
             }
         };
     }
 
     void updateTimerTextView (long timeLeft) {
         if (timeLeft%60 < 10)
-            timerTextView.setText(String.format("%d:0%d", timeLeft/60, timeLeft%60));
+            timerTextView.setText(String.format(Locale.ENGLISH,"%d:0%d", timeLeft/60, timeLeft%60));
         else
-            timerTextView.setText(String.format("%d:%d", timeLeft/60, timeLeft%60));
+            timerTextView.setText(String.format(Locale.ENGLISH,"%d:%d", timeLeft/60, timeLeft%60));
     }
 
     void createNewTask() {
-        int taskNum1 = (int) (Math.random()*31);
-        int taskNum2 = (int) (Math.random()*31);
+        int taskNum1 = (int) (Math.random()*randomSeed);
+        int taskNum2 = (int) (Math.random()*randomSeed);
         int taskRes = taskNum1 + taskNum2;
 
-        taskTextView.setText(String.format("%d + %d", taskNum1, taskNum2));
+        taskTextView.setText(String.format(Locale.ENGLISH,"%d + %d", taskNum1, taskNum2));
 
         correctButton = arrOfButtons[(int) (Math.random()*6)];
 
         for (int i : arrOfButtons) {
-            ((Button) findViewById(i)).setText(String.format("%d", (int) (Math.random()*31)+(int) (Math.random()*31)));
+            ((Button) findViewById(i)).setText(String.format(Locale.ENGLISH,"%d",
+                    (int) (Math.random()*randomSeed)+ (int) (Math.random()*randomSeed)));
         }
 
-        ((Button) findViewById(correctButton)).setText(String.format("%d", taskRes));
+        ((Button) findViewById(correctButton)).setText(String.format(Locale.ENGLISH,"%d", taskRes));
     }
 
     public void onClickBegin (View view) {
@@ -79,8 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
         //Делаем кнопку невидимой и убираем её.
         view.setVisibility(View.INVISIBLE);
-        view.animate().translationX(1000);
+        view.animate().translationXBy(1000);
 
+        beginNewGame();
+    }
+
+    void beginNewGame() {
         score = 0;
         tries = 0;
         isInGame = true;
