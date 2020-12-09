@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     double changeMetricToF (double t)
     {
-        return (t-273.15)*1.8 + 32;
+        return changeMetricToC(t)*1.8 + 32;
     }
 
     @SuppressLint("SetTextI18n")
