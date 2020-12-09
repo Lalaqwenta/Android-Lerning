@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Ducks To Do List</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Tasks' properties -->
+    <string name="task_name">Task name</string>
+    <string name="task_definition">Explanation if needed</string>
+    <string name="task_date">When this task must be performed?</string>
+    <string name="task_cost">How much ducks are you ready to bet?</string>
+    <string name="task_place">Where this should happen?</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string-array name="background_array">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+    </string-array>
+    <string name="settings_background">" Choose the background "</string>
+    <string name="settings_view">View settings</string>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Утиный To Do List</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Сообщения</string>
+    <string name="sync_header">Синхронизация</string>
+
+    <!-- Tasks' properties -->
+    <string name="task_name">Название задачи</string>
+    <string name="task_definition">Пояснения, если они <br></br> необходимы </string>
+    <string name="task_date">Когда эта задача должна быть выполнена?</string>
+    <string name="task_cost">Сколько уток Вы готовы поставить?</string>
+    <string name="task_place">Где всё должно <br></br>происходить?</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Ваша подпись</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- View Preferences -->
+    <string-array name="background_array">
+        <item>Синий</item>
+        <item>Зеленый</item>
+        <item>Фиолетовый</item>
+    </string-array>
+    <string name="settings_background">Выберите фон</string>
+    <string name="settings_view">Настройки внешнего вида</string>
+</resources>
